@@ -9,6 +9,9 @@ import java.util.ArrayList;
  */
 
 public interface ContactView extends BaseView {
-
+        /***
+         * It populate the list in the contact recycler view.
+         * @param contactList
+         */
         void setDefaultContactList(ArrayList<Contact> contactList);
 }

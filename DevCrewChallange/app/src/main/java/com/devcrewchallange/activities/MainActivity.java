@@ -46,6 +46,9 @@ public class MainActivity extends BaseActivity implements ContactView, AddContac
 
     }
 
+    /***
+     * This method will registers all the listeners or events.
+     */
     private void setListeners() {
         mHolder.getFabAddContact().setOnClickListener(addContactOnClickListener);
     }
@@ -57,6 +60,7 @@ public class MainActivity extends BaseActivity implements ContactView, AddContac
         }
     };
 
+    //It open the Add Contact Dialog.
     void showAddContactDialog() {
         try {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
@@ -74,6 +78,11 @@ public class MainActivity extends BaseActivity implements ContactView, AddContac
         }
     }
 
+
+    /***
+     * The response from presenter will be set in the method. Whether the list is dummy or it fetching from the  server in presenter.
+     * @param contactList
+     */
     @Override
     public void setDefaultContactList(ArrayList<Contact> contactList) {
         mContactList = contactList;
@@ -85,6 +94,10 @@ public class MainActivity extends BaseActivity implements ContactView, AddContac
         }
     }
 
+    /***
+     * After selecting contact, this method will be called to add the new contact in the list and refresh it.
+     * @param contact
+     */
     @Override
     public void onContactAdded(Contact contact) {
         if(mContactList != null)
