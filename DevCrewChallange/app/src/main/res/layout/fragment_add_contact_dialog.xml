@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+
+    tools:context="com.devcrewchallange.fragments.AddContactDialogFragment">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/grey"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center|left"
+                android:text="@string/enter_first_name"
+                android:layout_width="125dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_marginEnd="10dp"
+                android:id="@+id/editTextFirstName"
+                android:inputType="textPersonName"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:background="@color/grey"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:textSize="16sp"
+                android:gravity="center|left"
+                android:text="@string/enter_last_name"
+                android:layout_width="125dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_marginEnd="10dp"
+                android:id="@+id/editTextLastName"
+                android:inputType="textPersonName"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:background="@color/grey"
+            android:padding="10dp"
+            android:weightSum="2"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonAddContact"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Add"/>
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Cancel"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
